@@ -1,10 +1,11 @@
 {
-  "name": "agent-chat-ui",
-  "readme": "https://github.com/langchain-ai/agent-chat-ui/blob/main/README.md",
-  "homepage": "https://agentchat.vercel.app",
+  "name": "zhixing-agent-web",
+  "author": "nowtime",
+  "readme": "https://github.com/nowtime306/zhixing-agent/blob/onwer_agent/README.md",
+  "homepage": "https://github.com/nowtime306/zhixing-agent",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/langchain-ai/agent-chat-ui.git"
+    "url": "git+https://github.com/nowtime306/zhixing-agent.git"
   },
   "private": true,
   "version": "0.0.0",

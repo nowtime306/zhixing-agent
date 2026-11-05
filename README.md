@@ -1,112 +1,49 @@
-<div align="center">
-  <a href="https://docs.langchain.com/oss/python/deepagents/overview#deep-agents-overview">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset=".github/images/logo-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset=".github/images/logo-light.svg">
-      <img alt="Deep Agents Logo" src=".github/images/logo-dark.svg" width="50%">
-    </picture>
-  </a>
-</div>
+# 知行 Agent · zhixing-agent
 
-<div align="center">
-  <h3>The batteries-included agent harness.</h3>
-</div>
+**研发与维护：nowtime**
 
-<div align="center">
-  <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/pypi/l/deepagents" alt="PyPI - License"></a>
-  <a href="https://pypistats.org/packages/deepagents" target="_blank"><img src="https://img.shields.io/pepy/dt/deepagents" alt="PyPI - Downloads"></a>
-  <a href="https://pypi.org/project/deepagents/#history" target="_blank"><img src="https://img.shields.io/pypi/v/deepagents?label=%20" alt="Version"></a>
-  <a href="https://x.com/langchain_oss" target="_blank"><img src="https://img.shields.io/twitter/url/https/twitter.com/langchain_oss.svg?style=social&label=Follow%20%40LangChain" alt="Twitter / X"></a>
-</div>
+知行 Agent 是由 nowtime 研发与维护的中文 AI Agent 平台，整合开源智能体框架，提供智能对话、自主任务、知识检索和可视化工作流，以及模型配置、权限和运行治理。
 
-<br>
+- 项目仓库：https://github.com/nowtime306/zhixing-agent
+- 研发署名：**nowtime**（GitHub：[@nowtime306](https://github.com/nowtime306)）
+- 开发分支：`onwer_agent`
+- 平台版本：`0.2.0`
 
-Deep Agents is an open source agent harness — an opinionated agent that runs out of the box. Extend, override, or replace any piece.
+## 平台能力
 
-**Principles:**
+- **智能对话**：模型选择、会话历史、附件与图片输入、联网接入、SSE 事件及用量统计。
+- **模型管理**：通过中文页面维护模型用途、服务商、协议、密钥和启停状态，密钥加密保存。
+- **知识与工具**：文档管理、向量与混合检索、重排、MCP、Skills 和知识资源授权。
+- **自主任务**：持久任务、隔离执行、审批、预算控制、恢复和成果管理。
+- **可视化工作流**：画布配置、节点调试、运行记录、版本发布、历史恢复与复制。
+- **平台治理**：注册与权限、组织管理、资源引用追溯、运行审计和 Token 用量。
+- **评测**：DeepEval 集成及受控 CLI 场景验证。
 
-- **Opinionated** — defaults tuned for long-horizon, multi-step work
-- **Extensible** — override or replace any piece without forking
-- **Model-agnostic** — works with any LLM that supports tool calling: frontier, open-weight, or local
-- **Production-ready** — built on LangGraph (streaming, persistence, checkpointing) with first-class tracing, evaluation, and deployment via LangSmith
+上述能力描述代码范围；具体部署的开放状态和验收边界以交付记录为准。当前受限部署仍关闭 Work、自动任务、评测和媒体后台；平台持久评测驱动、完整 A20 准入、B100 与部分正式页面验收尚未完成，不将受控案例或接口测试视为全平台验收。
 
-**Features include:**
+## 工程目录
 
-- **Sub-agents** — delegate tasks to agents with isolated context windows
-- **Filesystem** — read, write, edit, or search over pluggable local, sandboxed, or remote backends
-- **Context management** — summarize long threads and offload tool outputs to disk
-- **Shell access** — run commands in your sandbox of choice
-- **Persistent memory** — pluggable state and store backends for cross-session recall
-- **Human-in-the-loop** — approve, edit, or reject tool calls before they run
-- **Skills** — reusable behaviors the agent can load on demand
-- **Tools** — bring your own functions or any MCP server
+- `apps/web/`：中文 Web 界面，基于 Next.js、React 和 Agent Chat UI 改造。
+- `services/api/`：FastAPI 平台服务、认证权限、业务资源和执行调度。
+- `services/evaluation/`：独立评测运行器与受控场景。
+- `services/sandbox/`：OpenSandbox 本地执行环境相关配置。
+- `libs/`：保留的 Deep Agents SDK 与上游组件。
+- `docs/`：需求、开发、测试、部署和版本记录。
 
-Deep Agents is available as a JavaScript/TypeScript library — see [deepagents.js](https://github.com/langchain-ai/deepagentsjs).
+## 开发与部署文档
 
-> [!NOTE]
-> **Deep Agents Code** — a pre-built coding agent in your terminal, similar to Claude Code or Cursor, powered by any LLM. Install with `curl -LsSf https://langch.in/dcode | bash`. See the [documentation](https://docs.langchain.com/deepagents-code) for the full feature set.
+- [开发实施文档](docs/development-plan.md)
+- [系统部署文档](docs/system-deployment.md)
+- [本轮交付范围与未验项目](docs/remaining-cases-release-plan-2026-11-05.md)
+- [独立测试记录](docs/remaining-cases-independent-qa-2026-11-05.md)
+- [部署验证记录](docs/remaining-cases-production-deployment-2026-11-05.md)
+- [版本与提交历史](docs/releases/history.md)
+- [项目更名与发布记录](docs/project-identity.md)
 
-## Quickstart
+仓库不包含本机数据库、模型密钥、账号凭据和私有运行证据。部署时应配置独立的数据库、存储、密钥和运行权限，不将开发环境的路径或端口约定直接当成通用部署配置。
 
-```bash
-uv add deepagents
-```
+## 开源基础与署名
 
-```python
-from deepagents import create_deep_agent
+知行 Agent 的平台层新增实现、中文交互与业务集成由 **nowtime** 研发和维护。本仓库在 [LangChain Deep Agents](https://github.com/langchain-ai/deepagents) 源码基础上扩展，前端基于 [Agent Chat UI](https://github.com/langchain-ai/agent-chat-ui) 改造，并使用 LangGraph、LangChain、OpenSandbox、DeepEval 等组件。
 
-agent = create_deep_agent(
-    model="openai:gpt-6-astra",
-    system_prompt="You are a research assistant.",
-)
-result = agent.invoke({"messages": "Research LangGraph and write a summary"})
-```
-
-The agent can plan, read/write files, and manage its own context. Add your own tools, swap models, customize prompts, configure sub-agents, and more. See the [documentation](https://docs.langchain.com/oss/python/deepagents/overview) for full details.
-
-> [!TIP]
-> For developing, debugging, and deploying AI agents and LLM applications, see [LangSmith](https://docs.langchain.com/langsmith/home).
-
-## FAQ
-
-### How is this different from LangGraph or LangChain?
-
-LangGraph is the graph runtime. LangChain's `create_agent` is a minimal agent harness on top of it. Deep Agents is a more opinionated harness on top of `create_agent` — same building blocks, but with filesystem, sub-agents, context management, and skills bundled in. For how the three relate, see the [LangChain ecosystem overview](https://docs.langchain.com/oss/python/concepts/products).
-
-### Does this work with open-weight or local models?
-
-Yes. Any model that supports tool calling works — frontier APIs (OpenAI, Anthropic, Google), open-weight models hosted on providers like Baseten or Fireworks, and self-hosted models via Ollama, vLLM, or llama.cpp. Use any [LangChain chat model](https://docs.langchain.com/oss/python/langchain/models).
-
-### Can I use this in production?
-
-Yes! Deep Agents is built on LangGraph, designed for production agent deployments. Pair it with [LangSmith](https://docs.langchain.com/langsmith/home) for tracing, evaluation, and monitoring. See [Going to production](https://docs.langchain.com/oss/python/deepagents/going-to-production) for the full guide.
-
-### When should I use Deep Agents vs. LangChain or LangGraph directly?
-
-All three are layers in the same stack — see the [LangChain ecosystem overview](https://docs.langchain.com/oss/python/concepts/products) for how they relate. Use **Deep Agents** when you want the full harness — planning, context management, delegation — out of the box. Use [**LangChain's `create_agent`**](https://docs.langchain.com/oss/python/langchain/agents) when you want a lighter harness without the bundled middleware. Drop to [**LangGraph**](https://docs.langchain.com/oss/python/langgraph/overview) when the agent loop itself isn't the right shape and you need a custom graph.
-
-The layers compose: any LangGraph `CompiledStateGraph` can be passed in as a sub-agent to a Deep Agent, so custom orchestration plugs in alongside the harness's defaults.
-
----
-
-## Resources
-
-- [Examples](examples/) — working agents and patterns
-- [Documentation](https://docs.langchain.com/oss/python/deepagents/overview) — conceptual overviews and guides
-- [LangChain ecosystem overview](https://docs.langchain.com/oss/python/concepts/products) — how Deep Agents, LangChain, LangGraph, and LangSmith fit together
-- [API reference](https://reference.langchain.com/python/deepagents/) — complete reference for all public classes, functions, and types
-- [Discussions](https://forum.langchain.com/c/oss-product-help-lc-and-lg/deep-agents/18) — community forum for technical questions, ideas, and feedback
-- [LangChain Academy](https://academy.langchain.com/) — Comprehensive, free courses on LangChain libraries and products, made by the LangChain team.
-- [Development Guide](libs/DEVELOPMENT.md) — local setup and package-specific checks
-- [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview) — how to contribute and find good first issues
-- [Code of Conduct](https://github.com/langchain-ai/langchain/?tab=coc-ov-file) — community guidelines and standards
-
----
-
-## Acknowledgements
-
-Inspired by Claude Code: an attempt to identify what makes it general-purpose, and push that further.
-
-## Security
-
-Deep Agents follows a "trust the LLM" model. The agent can do anything its tools allow. Enforce boundaries at the tool/sandbox level, not by expecting the model to self-police. See the [security policy](https://github.com/langchain-ai/deepagents?tab=security-ov-file) for more information.
+保留上游原有作者、提交历史和许可证。平台署名不替代上游组件的署名；详见 [来源与贡献说明](NOTICE.md)、[根许可证](LICENSE) 及 [Agent Chat UI 许可证](apps/web/LICENSE)。

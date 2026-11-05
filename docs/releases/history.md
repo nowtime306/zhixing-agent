@@ -172,3 +172,11 @@ Work详情修复提交`f2fd3c9aa7a07af9902b8e7bcd5046dcb8fbcf85`已正常推送�
 - 真实离线备份manifest SHA `6d637f7d8fd960ac5c927f403b04da9a5548b3faeff11220a39ec877da8c7454`。原65字节恢复名被截断的失败及库保留；独审新57字节隔离恢复验证exact schema85、全部manifest表计数和模型解密，通过后才启动。没有向原生产库执行restore或migrate。启动前原142保护表hash一致；新启动后的Ask注册与授权登录元数据变化分项核证，不声称服务记录零变化。
 - 运维独立上线收据SHA `203c84e7d550c4047eb045ac92f649340b5b70c1fa7c2f819188e6efa80f0759`；正式实际HTTP重新登录、资源读取、双Cookie隔离/测试注销保护、错误Origin403、健康和Cq资源通过。原模型、用户数据和UNKNOWN保留。
 - 此为受限源码/CLI限定交付：正式浏览器保存拒绝项留人工验收；平台A20准入/持久驱动、B100、持续评测/真实judge及广泛模型质量未完成。原始逐字OK失败不改绿。没有调用完整发布complete或创建全功能验收标签；运行源码版本与后续文档提交分开登记。
+
+
+## 2026-11-06：知行 Agent 独立仓库与 nowtime 署名
+
+- 对外项目名称确定为 `zhixing-agent`（知行 Agent），研发与维护署名 `nowtime`，发布至 https://github.com/nowtime306/zhixing-agent 。沿用 `onwer_agent` 分支与完整祖先历史，原 `nowtime306/deepagents` 仓库保留，本地旧远端另存为 `legacy`。
+- 更新项目 README、平台元数据、前端公开包信息及页面作者，自研 API/评测包增加作者说明；原内部包名、SDK 导入名、数据库与服务目录不迁移。新增 `NOTICE.md`，保留上游版权、许可证与既有作者，不将上游实现记作 nowtime 原创。
+- 元数据、依赖不变与许可证检查通过；TypeScript 6 无输出检查通过。本次仅项目身份与文档修改，现有正式运行源码仍为 `9f1c53f2d7ed2f0f897ed405ff6ffe55e059f60e`，没有重新部署或宣称新功能验收。
+- 新仓库的继承自动工作流暂未启用，避免未适配的上游发布/定时任务自动执行。新提交使用 nowtime 作者名与 GitHub no-reply 邮箱；实际提交、推送和远端核验回执存 `.local/project-identity-20261106/`。详见 [名称与署名记录](../project-identity.md)。
