@@ -186,3 +186,10 @@ Work详情修复提交`f2fd3c9aa7a07af9902b8e7bcd5046dcb8fbcf85`已正常推送�
 
 - 按用户要求，`main` 设为 zhixing-agent 主分支及 GitHub 默认分支，`dev` 设为发布分支。当前平台版本及本次分支说明同步为两分支起点；本地原 main 从已确认祖先快进，原 onwer_agent 及其他分支保留，不使用强制推送。
 - README、前端 README 链接和平台发布分支元数据相应更新；主/发布分支的提交关系和 GitHub 默认分支经推送后分别核验。实际 commit/ref 回执存本机 `.local/project-identity-20261106/`，本次不触发部署或改变已有受限验收边界。
+
+
+### 同日：项目 README 与可视化介绍
+
+- 分支 `main`。补齐项目介绍、Ask / Work / Workflow 能力、实际测试界面、系统架构、部署准备和文档导航；新增原创 SVG 品牌图与架构图，以及合成测试账号的实际页面截图。参考 DeepSeek-R1、Dify 和 DeerFlow 的 README 信息组织，保留上游来源与许可。
+- 核对代码与当前受限交付范围，明确 Qdrant 本地模式、评测持久驱动未准入及历史部署脚本的分支限制；没有将未开放能力写成已全量验收。
+- 验证图片渲染、相对链接、页内导航与 GitHub Markdown 输出。本次仅文档和展示资产，未修改应用、数据库、密钥或运行开关；正式运行源码保持 9f1c53f2d7ed2f0f897ed405ff6ffe55e059f60e。实际提交与远端核验另存本机 `.local/readme-showcase-20261106/`，不推进 `dev` 发布分支。

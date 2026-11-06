@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 330" role="img" aria-labelledby="title desc">
+<title id="title">知行 Agent · ZHIXING AGENT</title><desc id="desc">由 nowtime 研发与维护的中文 AI Agent 平台。智能对话、自主任务与可视化工作流。</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#fbf7f1"/><stop offset="1" stop-color="#eef4f1"/></linearGradient><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#dce3dd"/></pattern></defs>
+<rect width="1280" height="330" rx="28" fill="url(#bg)"/><rect x="820" width="460" height="330" rx="28" fill="url(#dots)"/>
+<g font-family="'Segoe UI','Microsoft YaHei','Noto Sans CJK SC',sans-serif"><rect x="64" y="55" width="66" height="66" rx="20" fill="#bc4030"/><path d="M97 68l6 20 18 6-18 6-6 20-6-20-18-6 18-6z" fill="#fff"/><path d="M117 65l2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#f7d6b6"/>
+<text x="152" y="80" font-size="15" letter-spacing="3" font-weight="600" fill="#8b6157">ZHIXING AGENT</text><text x="152" y="119" font-size="38" font-weight="750" fill="#203b34">知行 Agent</text>
+<text x="66" y="183" font-size="27" font-weight="600" fill="#203b34">让对话连接知识，让计划走向执行。</text><text x="66" y="215" font-size="17" fill="#68766c">中文 AI Agent 平台 · 研发与维护 nowtime</text>
+<rect x="66" y="252" width="162" height="37" rx="18" fill="#fff"/><text x="147" y="276" text-anchor="middle" font-size="15" fill="#405b51">Ask · 智能对话</text>
+<rect x="242" y="252" width="170" height="37" rx="18" fill="#fff"/><text x="327" y="276" text-anchor="middle" font-size="15" fill="#405b51">Work · 自主任务</text>
+<rect x="426" y="252" width="218" height="37" rx="18" fill="#fff"/><text x="535" y="276" text-anchor="middle" font-size="15" fill="#405b51">Workflow · 可视化流程</text>
+<path d="M893 120h43v77h42m-85-77v125h85m94-48h52v-77h-52" fill="none" stroke="#93a99d" stroke-width="2.5"/>
+<rect x="824" y="85" width="112" height="65" rx="16" fill="#fff" stroke="#d9e4db"/><text x="880" y="124" text-anchor="middle" font-size="19" font-weight="600" fill="#496355">知识</text>
+<rect x="978" y="162" width="112" height="65" rx="16" fill="#e8efe9" stroke="#b8ccbb"/><text x="1034" y="201" text-anchor="middle" font-size="19" font-weight="600" fill="#496355">计划</text>
+<rect x="978" y="240" width="112" height="48" rx="14" fill="#fff" stroke="#d9e4db"/><text x="1034" y="270" text-anchor="middle" font-size="17" fill="#496355">工具与技能</text>
+<rect x="1105" y="85" width="111" height="65" rx="16" fill="#bd4432"/><text x="1160" y="124" text-anchor="middle" font-size="19" font-weight="600" fill="#fff">行动</text>
+</g></svg>
