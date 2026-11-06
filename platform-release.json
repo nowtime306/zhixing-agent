@@ -1,7 +1,7 @@
 {
   "component": "zhixing-platform",
   "version": "0.2.0",
-  "branch": "onwer_agent",
+  "branch": "dev",
   "history": "docs/releases/history.md",
   "name": "zhixing-agent",
   "author": "nowtime",

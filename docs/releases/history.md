@@ -180,3 +180,9 @@ Work详情修复提交`f2fd3c9aa7a07af9902b8e7bcd5046dcb8fbcf85`已正常推送�
 - 更新项目 README、平台元数据、前端公开包信息及页面作者，自研 API/评测包增加作者说明；原内部包名、SDK 导入名、数据库与服务目录不迁移。新增 `NOTICE.md`，保留上游版权、许可证与既有作者，不将上游实现记作 nowtime 原创。
 - 元数据、依赖不变与许可证检查通过；TypeScript 6 无输出检查通过。本次仅项目身份与文档修改，现有正式运行源码仍为 `9f1c53f2d7ed2f0f897ed405ff6ffe55e059f60e`，没有重新部署或宣称新功能验收。
 - 新仓库的继承自动工作流暂未启用，避免未适配的上游发布/定时任务自动执行。新提交使用 nowtime 作者名与 GitHub no-reply 邮箱；实际提交、推送和远端核验回执存 `.local/project-identity-20261106/`。详见 [名称与署名记录](../project-identity.md)。
+
+
+### 同日：main 主分支与 dev 发布分支
+
+- 按用户要求，`main` 设为 zhixing-agent 主分支及 GitHub 默认分支，`dev` 设为发布分支。当前平台版本及本次分支说明同步为两分支起点；本地原 main 从已确认祖先快进，原 onwer_agent 及其他分支保留，不使用强制推送。
+- README、前端 README 链接和平台发布分支元数据相应更新；主/发布分支的提交关系和 GitHub 默认分支经推送后分别核验。实际 commit/ref 回执存本机 `.local/project-identity-20261106/`，本次不触发部署或改变已有受限验收边界。

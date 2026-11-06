@@ -6,7 +6,9 @@
 
 - 项目仓库：https://github.com/nowtime306/zhixing-agent
 - 研发署名：**nowtime**（GitHub：[@nowtime306](https://github.com/nowtime306)）
-- 开发分支：`onwer_agent`
+- 主分支与默认分支：`main`
+- 发布分支：`dev`
+- 既有开发分支：`onwer_agent`（保留）
 - 平台版本：`0.2.0`
 
 ## 平台能力

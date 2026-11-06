@@ -4,7 +4,10 @@
 项目名称：**知行 Agent（zhixing-agent）**  
 研发与维护：**nowtime**  
 GitHub：https://github.com/nowtime306/zhixing-agent  
-开发与默认展示分支：`onwer_agent`
+
+- 主分支与默认展示分支：`main`
+- 发布分支：`dev`
+- 既有开发分支：`onwer_agent`（保留）
 
 ## 发布方式
 
@@ -28,3 +31,12 @@ GitHub：https://github.com/nowtime306/zhixing-agent
 已检查 JSON/TOML 元数据、平台作者、上游许可证及依赖保持；前端使用项目已有 TypeScript 6 完成 `--noEmit` 检查。改名不涉及数据库迁移、模型密钥、业务逻辑或现有正式服务切换，不据此生成新功能验收结果。
 
 实际推送分支、提交 SHA、远端 HEAD 与默认分支校验另保存在本机私有 `.local/project-identity-20261106/` 回执中；根 `docs/releases/history.md` 记录本次名称变更。
+
+
+## 2026-11-06 分支角色调整
+
+按用户要求，`main` 是项目主分支及 GitHub 默认分支，`dev` 是发布分支。既有 `onwer_agent` 分支和完整历史保留。首次调整将当前平台代码及本次分支说明同步为 main/dev 的共同起点；本地原 main 是其祖先，仅做快进，不改写历史。
+
+开发内容先合入 main，发布时选择已经验收的主分支提交推进 dev，并在发布记录中绑定版本、提交和验收结果。分支角色不自动授予部署或功能开放，也不把当前受限版本认定为完整验收。继承的上游自动工作流保持未启用。
+
+仓库 README、前端 README 地址和平台发布分支元数据同步更新。本次没有删除其他远端分支、强制推送或改变现有运行服务。实际 refs、远端默认分支和本地当前分支的核验回执单独存本机 `.local/project-identity-20261106/`。
